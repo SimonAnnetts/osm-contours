@@ -1,0 +1,11 @@
+# these are the credentials that the docker image will use to login
+# to USGS EROS to get the SRTM3 elevation data
+USER=youremail@mail.com
+PASSWORD=yourpassword
+# this is the user id and group id that the resultant .o5m OSM data
+# files will be owned by
+UID=1001
+GID=1001
+# which height file sources to use (view1, view3,srtm3)
+SOURCE=view3,srtm3
+
