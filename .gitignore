@@ -3,4 +3,5 @@
 *.tif
 *.hgt
 .config
+hgt/*.txt
 
