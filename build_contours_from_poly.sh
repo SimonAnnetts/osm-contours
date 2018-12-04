@@ -15,7 +15,7 @@ OPEN_TOPO_MAP_DIR=~/OpenTopoMap
 
 if [ -n "$(find ./poly -maxdepth 1 -name '*.poly' -print -quit)" ]; then
 
-	docker run --rm --env-file=.config --mount type=bind,source=poly,target=/import generate-osm-contours
+	docker run --rm --env-file=.config --mount type=bind,source=$(pwd)/poly,target=/import generate-osm-contours
 
 	if [ $? = 0 ]; then
 		mv -f poly/*.poly completed_poly/
