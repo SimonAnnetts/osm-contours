@@ -20,6 +20,7 @@ if [ -n "$(find ./poly -maxdepth 1 -name '*.poly' -print -quit)" ]; then
 	if [ $? = 0 ]; then
 		mv -f poly/*.poly completed_poly/
 		mv -f poly/*.o5m .
+		mkdir hgt/ 2>/dev/null
 		mv -f poly/completed_hgt/* hgt/
 		rm -Rf poly/hgt/*
 		rm -f ${COMBINED_PBF_FILE}
